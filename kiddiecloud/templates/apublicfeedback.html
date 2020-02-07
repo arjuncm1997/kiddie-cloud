@@ -1,0 +1,37 @@
+
+
+
+{% extends 'admin_layout.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4> Feedbacks Of Public:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tasks in tasks %}
+          <tr>
+            <th scope="row">{{tasks.name}}</th>
+            <td>{{tasks.email}}</td>
+            <td>{{ tasks.subject }}</td>
+            <td>{{ tasks.message }}</td>
+            </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

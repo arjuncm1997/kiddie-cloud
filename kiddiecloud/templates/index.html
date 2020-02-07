@@ -1,0 +1,186 @@
+{%extends "public_layout.html"%}
+
+{%block content%}
+	<!-- banner -->
+	<div class="banner"> 
+		<section class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="banner-img1">
+							<div class="banner-w3text">
+								<h2>We Provide Medical Support <br>for childrens  </h2>
+								<!-- <a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal"><span>Read More</span></a> -->
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner-img2">
+							<div class="banner-w3text">
+								<h3>we provide guidence  <br>for parents</h3>
+								<!-- <a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal"><span>Read More</span></a> -->
+							</div>
+						</div>
+					</li>
+				</ul> 
+			</div>
+		</section> 
+		<!-- FlexSlider -->
+		<script defer src="../static/js/jquery.flexslider.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+			  $('.flexslider').flexslider({
+				animation: "slide",
+				start: function(slider){
+				  $('body').removeClass('loading');
+				}
+			  });
+			});
+		</script>
+		<!-- //FlexSlider -->
+	</div>
+	<!-- //banner -->
+	<!-- modal-about -->
+	<div class="modal bnr-modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div> 
+				<div class="modal-body modal-spa">
+					<img src="../static/images/img2.jpg" class="img-responsive" alt=""/>
+					<h4>Cras rutrum iaculis enim</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum iaculis enim, non convallis felis mattis at. Donec fringilla lacus eu pretium rutrum. Cras aliquet congue ullamcorper. Etiam mattis eros eu ullamcorper volutpat. Proin ut dui a urna efficitur varius. uisque molestie cursus mi et congue consectetur adipiscing elit cras rutrum iaculis enim, Lorem ipsum dolor sit amet, non convallis felis mattis at. Maecenas sodales tortor ac ligula ultrices dictum et quis urna. Etiam pulvinar metus neque, eget porttitor massa vulputate in. Fusce lacus purus, pulvinar ut lacinia id, sagittis eu mi. Vestibulum eleifend massa sem, eget dapibus turpis efficitur at. </p>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<!-- //modal-about -->     
+	<!-- about -->
+	<div class="about w3-agileits">
+		<div class="container"> 
+			<div class="col-md-6 about-left">
+				<h3 class="agileits-title">Welcome To Kiddie Cloud</h3> 
+			</div>
+			<div class="col-md-6 about-right agileits-w3layoutsleft"> 
+				<h4>Sed tincidunt lorem ipsum</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis, eget placerat mauris sed lectus tellus</p>
+				<p>Fusce eu semper lacus, sodales id elit a, feugiat porttitor nulla. Sed porta magna vitae nisl vulputate lacinia.</p>
+				<ul> 
+					<li><span class="glyphicon glyphicon-share-alt"></span> Duis aute irure dolor in reprehenderit voluptate </li>
+					<li><span class="glyphicon glyphicon-share-alt"></span> Excepteur sint occaecat cupidatat non proident</li>
+					<li><span class="glyphicon glyphicon-share-alt"></span> Sunt in culpa qui officia deserunt mollit </li>
+				</ul> 
+			</div> 
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //about -->
+	<!-- news -->
+	<div class="news w3-agileits">
+		<div class="container"> 
+			<h3 class="agileits-title1">News & Events</h3> 
+			<div class="news-agileinfo">
+				<div class="col-md-6 news-w3left"> 
+					<h4><a href="" data-toggle="modal" >Childrens Day </a></h4>
+					<h6>November 14</h6>
+					<p>Children's Day is celebrated across India to increase awareness of the rights, care and education of children. It is celebrated on 14 November every year as a tribute to India's First Prime Minister, Jawaharlal Nehru. Fondly known as Chacha Nehru among children, he advocated for children to have fulfilled education.</p>
+					<!-- <a href="https://en.wikipedia.org/wiki/Children's_Day_(India)" class="agilebtn"><span>Read More</span></a> -->
+				</div>
+				<div class="col-md-6 news-w3right"> 
+					<img src="../static/images/childrensday.jpg" class="img-responsive" style="width: 540px;height: 319px;" alt=""/> 
+				</div> 
+				<div class="clearfix"> </div>
+			</div> 
+			<div class="news-agileinfo btm-newsrow w3-agileits">
+				<div class="col-md-6 news-w3left news-w3left1"> 
+					<h4><a href="" data-toggle="modal" >Parents Day</a></h4>
+					<h6>July 28</h6>
+					<p>Parents' Day Celebration in India: ... Aptly named as Parents' Day, it is celebrated on the fourth Sunday of July every year. This year, Parents' Day in India is on 28 July. Here is a reflection on what it means to be a parent, and also some fun activities that you can do to celebrate Parents' Day with your little ones!</p>
+					<!-- <a href="" class="agilebtn" ><span>Read More</span></a> -->
+				</div>
+				<div class="col-md-6 news-w3right news-w3right1"> 
+					<img src="../static/images/parentsday.jpg" class="img-responsive" style="width: 540px;height: 319px;" alt=""/> 
+				</div> 
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //news -->
+	<!-- services -->
+	<div class="services agileits-w3layouts">
+		<div class="container">
+			<h3 class="agileits-title1">Our Services</h3>  
+			<div class="services-w3lsrow">
+				<div class="col-md-4 col-sm-4 services-grid">
+					<a href="/login"><span class="fa fa-medkit" aria-hidden="true"></span></a>
+					<h5>Health Support</h5>
+					<p>We guide food plans of childrens</p>
+				</div>
+				<div class="col-md-4 col-sm-4 services-grid">
+					<a href="/login"><span class="fa fa-child" aria-hidden="true"></span></a>
+					<h5>Special Child Care</h5>
+					<p>We guide parents to how care child</p>
+				</div>
+				<div class="col-md-4 col-sm-4 services-grid">
+					<a href="/login"><span class="fa fa-puzzle-piece wthree" aria-hidden="true"></span></a>
+					<h5>Education Admission</h5>
+					<p>We provide school admissions</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>   
+		</div>
+	</div>
+	<!-- //services --> 
+	<!-- slid -->
+	<!-- <div class="w3layouts-slid">
+		<div class="container">   
+			<h4>Let the Learning Begin</h4> 
+			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal"><span>Read More</span></a>
+		</div>
+	</div> -->
+	
+	<!-- <div class="services agileits-w3layouts">
+            <div class="container">
+                <h3 class="agileits-title1">Testimonials</h3>  
+                <div class="services-w3lsrow">
+                    <div class="col-md-3 col-sm-3 services-grid">
+                        <div class="agile-testi-bottom">
+                            <img src="../static/images/t1.png" alt=""/> 
+                            <h4>Thomson Deo</h4>
+                            <h6>Donec libero dui, scelerisque ac augue</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus tellus</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 services-grid">
+                        <div class="agile-testi-bottom">
+							<img src="../static/images/t2.png" alt=""/> 
+							<h4>Fonica libero</h4>
+							<h6>Donec libero dui, scelerisque ac augue</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus tellus</p>
+						</div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 services-grid">
+                        <div class="agile-testi-bottom">
+							<img src="../static/images/t3.png" alt=""/> 
+							<h4>Michael Doe</h4>
+							<h6>Donec libero dui, scelerisque ac augue</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus tellus</p>
+						</div>
+                    </div>
+                    <div class="col-md-3 col-sm-3 services-grid">
+                        <div class="agile-testi-bottom">
+							<img src="../static/images/t4.png" alt=""/> 
+							<h4>Laura Carl</h4>
+							<h6>Donec libero dui, scelerisque ac augue</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt lorem sed velit fermentum lobortis. Fusce eu semper lacus, eget placerat mauris. Sed lectus tellus</p>
+						</div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>   
+            </div>
+        </div> -->
+	<!-- //testimonial -->     
+
+{%endblock%}

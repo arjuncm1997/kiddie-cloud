@@ -1,0 +1,41 @@
+
+
+
+
+
+{% extends 'admin_layout.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4> Approved Admissions</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>School Name</th>
+            <th>Student Name</th>
+            <th>DOB</th>
+            <th>STD</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tasks in tasks %}
+          <tr>
+            <th scope="row">{{tasks.user}}</th>
+            <td>{{tasks.school}}</td>
+            <td>{{ tasks.name }}</td>
+            <td>{{ tasks.dob }}</td>
+            <td>{{ tasks.std }}</td>
+            </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

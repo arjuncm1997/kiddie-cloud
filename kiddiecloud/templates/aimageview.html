@@ -1,0 +1,47 @@
+
+
+
+{% extends 'admin_layout.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4> Gallery:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tasks in tasks %}
+          <tr>
+            <th >{{tasks.name}}</th>
+            <td>{{tasks.desc}}</td>
+            <td><span class="image-block">
+                <a class="image-zoom" href="../static/pics/{{tasks.image}}" rel="prettyPhoto[gallery]" style="height: 250px;width: 335px;">
+                   <figure>
+                      <img src="../static/pics/{{tasks.image}}" class="img-fluid" alt="" style="height: 50px;width: 50px;">
+                      <figcaption>
+                         
+                      </figcaption>
+                   </figure>
+                </a>
+             </span></td>
+            <td><a href="/aimageupdate/{{tasks.id}}"><button>Edit</button></a></td>
+            
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

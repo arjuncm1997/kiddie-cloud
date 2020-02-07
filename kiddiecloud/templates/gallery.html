@@ -1,0 +1,45 @@
+
+{%extends "public_layout.html"%}
+
+{%block content%}
+
+	<!-- banner -->
+	<div class="banner about-w3banner">  
+		<div class="banner-img1">
+			<div class="banner-w3text">
+				<h2>How Care Kidds</h2>
+			</div>
+		</div> 	 
+	</div>
+	<!-- //banner --> 
+	<!-- gallery -->
+	<div class="gallery w3-agileits">  
+		<div class="container">
+			<h3 class="agileits-title1 w3-agileits">Our Gallery</h3>   
+			<div class="agileinfo-gallery-row">
+				{% for image in image %}
+				<div class="col-md-4 col-sm-4 col-xs-6 w3gallery-grids">
+					<a href="" class="imghvr-hinge-right wthree">
+						<img src="../static/pics/{{image.image}}" class="img-response" alt="" style="width: 352px;height: 243.3px;" title="Kids Care Image"/> 
+						<div class="agile-figcaption">
+						  <h4>{{image.name}}</h4>
+						  <p>{{image.desc}}</p>
+						</div>
+					</a> 
+				</div> 
+				{% endfor %}
+				
+				<div class="clearfix"> </div>
+				<script type="text/javascript" src="../static/js/simple-lightbox.min.js"></script>
+				<script>
+					$(function(){
+						var gallery = $('.agileinfo-gallery-row a').simpleLightbox({navText:		['&lsaquo;','&rsaquo;']});
+					});
+				</script>  
+			</div> 
+		</div>
+	</div>
+	<!-- //gallery --> 
+
+
+{% endblock %}

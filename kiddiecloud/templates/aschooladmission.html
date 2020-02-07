@@ -1,0 +1,43 @@
+
+
+
+
+
+{% extends 'admin_layout.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4> Schools:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>School Name</th>
+            <th>student Name</th>
+            <th>DOB </th>
+            <th>STD </th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tasks in tasks %}
+          <tr>
+            <th scope="row">{{tasks.user}}</th>
+            <td>{{tasks.school}}</td>
+            <td>{{tasks.name}}</td>
+            <td>{{tasks.dob}}</td>
+            <td>{{tasks.std}}</td>
+            <td><a href="/aschoolconfirm/{{tasks.id}}"><button>Confirm</button></a></td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'doctor_layout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>New Queries</center></h2>
+    <table border="2" style="width:1002px; margin-left:250px; text-align:center; margin-top: 50px;">
+        <tr style="font-weight: bold;height: 50px;font-size: 20px;">
+            <td>Name</th>
+            <td>Question</th>
+            <td>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr style="font-size: 15px;height: 50px;">
+                <td>{{ tasks.user }}</td>
+                <td>{{ tasks.question }}</td>
+                <td><a href="/dqueryreplay/{{tasks.id}}"><button>Replay</button></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'doctor_layout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Booking request</center></h2>
+    <table border="4" style="width:1002px; margin-left:250px; text-align:center; margin-top: 50px;">
+        <tr style="font-weight: bold;height: 50px;font-size: 20px;">
+            <td>Id</th>
+            <td>Patient Name</th>
+            <td>Patient Age</th>
+            <td>Reason</th>
+            <td colspan=2>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr style="height: 50px;font-size: 15px;">
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.name }}</td>
+                <td>{{ tasks.age }}</td>
+                <td>{{ tasks.reason }}</td>
+                <td><a href="/dbookingconfirm/{{tasks.id}}">Confirm</a></td>
+                <td><a href="">Reject</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+
+{% endblock %}

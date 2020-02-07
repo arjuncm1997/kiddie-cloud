@@ -1,0 +1,26 @@
+{%extends "doctor_layout.html"%}
+
+{%block content%}
+
+<!-- /inner_content -->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo">Update Parenting Tips</h3>
+        <div class="modal-body align-w3">
+            <form action="/parentingupdate/{{task.id}}" method="POST" class="p-sm-3">
+                <div class="form-group">
+                    <label class="mb-2">How to take care your child</label>
+                    <textarea rows="4" class="form-control" name="parentingtips" id="parentingtips" >{{task.parentingtips}}
+
+                    </textarea>
+                </div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="ADD">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- //inner_content -->
+{%endblock%}

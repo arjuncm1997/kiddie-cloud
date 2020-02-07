@@ -1,0 +1,31 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Doctor Bookings</center></h2>
+    <table border="4" style="width:1002px; margin-left:250px; text-align:center; margin-top: 50px;">
+        <tr style="font-weight: bold;height: 50px;font-size: 20px;">
+            <td>Id</th>
+            <td>Name</th>
+            <td>Age</th>
+            <td>Reason</th>
+            <td>Doctor Name</th>
+            <td>Status</th>
+            <td colspan="2">Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr style="font-size: 15px;height: 50px;">
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.name }}</td>
+                <td>{{ tasks.age }}</td>
+                <td>{{ tasks.reason }}</td>
+                <td>{{ tasks.doctorname }}</td>
+                <td>{{ tasks.status }}</td>
+                <td><a href="/bookdoctorupdate/{{tasks.id}}">Update</a></td>
+                <td><a href="/bookdoctordelete/{{tasks.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+
+{% endblock %}

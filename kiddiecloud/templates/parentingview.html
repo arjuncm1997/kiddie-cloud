@@ -1,0 +1,23 @@
+{% extends 'doctor_layout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Parenting Tips</center></h2>
+    <table border="4" style="width:1002px; margin-left:250px; text-align:center; margin-top: 50px;">
+        <tr style="font-weight: bold;height: 50px; font-size: 20px;">
+            <td>Id</th>
+            <td>Parenting Tips</th>
+            <td colspan=2>Action</th>
+        </tr>
+        {% for tasks in tasks %}
+            <tr style="height: 50px;font-size: 15px;">
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.parentingtips }}</td>
+                <td><a href="/parentingupdate/{{tasks.id}}">Update</a></td>
+                <td><a href="/parentingdelete/{{tasks.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+
+{% endblock %}

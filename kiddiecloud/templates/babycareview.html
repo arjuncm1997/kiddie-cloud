@@ -1,0 +1,39 @@
+
+
+
+{% extends 'admin_layout.html'%}
+{% block content %}
+
+
+<div class="main-page">
+  <div class="tables">
+    <h2 class="title1"></h2>
+    <div class="panel-body widget-shadow">
+      <h4> Vaccination Details:</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th> Product</th>
+            <th>Usage</th>
+            <th>Location</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for tasks in tasks %}
+          <tr>
+            <th scope="row">{{tasks.id}}</th>
+            <td>{{tasks.product}}</td>
+            <td>{{ tasks.usage }}</td>
+            <td>{{ tasks.location }}</td>
+            <td><a href="/babycareupdate/{{tasks.id}}"><button>Edit</button></a></td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

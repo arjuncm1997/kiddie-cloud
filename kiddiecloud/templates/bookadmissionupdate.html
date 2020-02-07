@@ -1,0 +1,48 @@
+{%extends "user_layout.html"%}
+
+{%block content%}
+
+<!-- /inner_content -->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo">Update Admission Booking</h3>
+        <div class="modal-body align-w3">
+            <form action="/bookadmissionupdate/{{task.id}}" method="POST" class="p-sm-3">
+                <div class="form-group">
+                    <label>Choose your School</label>
+                    <select id="school" name="school"  class="form-control" required="">
+                        <option>{{task.school}}</option>
+                        {% for school in school %}
+                        <option> {{school.school}}</option>
+                        {% endfor %}
+                    </select>    
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Name of the child</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{task.name}}" aria-describedby="emailHelp" placeholder="" required="">
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" value="{{task.dob}}"aria-describedby="emailHelp" placeholder="" required="">
+                </div>
+                <div class="form-group">
+                    <label>Admission to Class</label>
+                    <input type="text" class="form-control" value="{{task.std}}">
+                    <select id="std" name="std" class="form-control" required="">
+                        <option value="One">One</option>
+                        <option value="Two">Two</option>
+                        <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                    </select>
+                    <span></span>
+                </div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="ADD">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- //inner_content -->
+{%endblock%}

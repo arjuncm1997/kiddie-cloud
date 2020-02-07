@@ -1,0 +1,66 @@
+{%extends "user_layout.html"%}
+
+{%block content%}
+
+
+<div class="news w3-agileits" style="background-color: white;">
+    <div class="container"> 
+        <h3 class="agileits-title1">Profile</h3> 
+        
+        <div class="news-agileinfo btm-newsrow w3-agileits">
+            <div class="col-md-6 news-w3left news-w3left1"> 
+                <h4><a href="" data-toggle="modal" style="color: black;">{{current_user.username}}</a></h4>
+                <h6>{{current_user.email}}</h6>
+                <!-- <a href="" class="agilebtn" ><span>Read More</span></a> -->
+                <form style="margin-top: 50px;" action="" method="POST" enctype="multipart/form-data" >
+                    {{form.hidden_tag()}}
+                    <div>
+                        <label>user name</label>
+                        {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                        {% for error in form.name.errors %}
+                        <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                             {% else %}
+                           {{ form.name(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                    <div>
+                      <label> Email</label>
+                      {% if form.email.errors %}
+                      {{ form.email(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.email.errors %}
+                      <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                           {% else %}
+                         {{ form.email(class="form-control form-control-lg") }}
+                      {% endif %}
+                    </div>
+                    <div>
+                      <label> Image</label>
+                      {{ form.pic(class="form-control-file") }}
+                      {% if form.pic.errors %}
+                          {% for error in form.pic.errors %}
+                              <span>{{ error }}</span></br>
+                          {% endfor %}
+                      {% endif %}
+                        </div>
+                                <div style="margin-top: 10px;">
+                    <a href="">{{ form.submit(class="btn btn-outline-info") }}	</a>
+                   <a style="color: green;" href="/uchangepassword/{{current_user.id}}">Change Password</a>
+                    </div>
+                  </form>
+            </div>
+            <div class="col-md-6 news-w3right news-w3right1"> 
+                <img src="../static/pics/{{current_user.image}}" class="img-responsive" style="width: 540px;height: 319px;" alt=""/> 
+            </div> 
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

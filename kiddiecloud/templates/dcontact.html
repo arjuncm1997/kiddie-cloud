@@ -1,0 +1,29 @@
+{%extends "doctor_layout.html"%}
+
+{%block content%}
+
+
+<!-- /inner_content -->
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo">Contact</h3>
+        <div class="modal-body align-w3">
+            <form action="/dcontact" method="POST" class="p-sm-3">
+                <div class="form-group">
+                    <label class="mb-2">Subject</label>
+                    <input type="text" class="form-control" name="subject">
+                </div>
+                <div class="form-group">
+                    <label class="mb-2">Message</label>
+                    <textarea rows="4" class="form-control" name="message" ></textarea>
+                </div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="Submitt">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- //inner_content -->
+{%endblock%}

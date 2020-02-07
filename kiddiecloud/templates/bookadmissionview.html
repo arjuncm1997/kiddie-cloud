@@ -1,0 +1,31 @@
+{% extends 'user_layout.html' %}
+
+{% block content %}
+<br><br>
+<h2><center>Admission Booking Details</center></h2>
+    <table border="4" style="width:1002px; margin-left:250px; text-align:center; margin-top: 50px;">
+        <tr style="font-weight: bold;height: 50px;font-size: 20px;">
+            <td>Id</td>
+            <td>School</td>
+            <td>Name</td>
+            <td>Date of Birth</td>
+            <td>Standard</td>
+            <td>Admission</td>
+            <td colspan=2>Action</td>
+        </tr>
+        {% for tasks in tasks %}
+            <tr style="font-size: 15px;height: 50px;">
+                <td>{{ tasks.id }}</td>
+                <td>{{ tasks.school }}</td>
+                <td>{{ tasks.name }}</td>
+                <td>{{ tasks.dob }}</td>
+                <td>{{ tasks.std }}</td>
+                <td>{{ tasks.status }}</td>
+                <td><a href="/bookadmissionupdate/{{tasks.id}}">Update</a></td>
+                <td><a href="/bookadmissiondelete/{{tasks.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+<br><br>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'user_layout.html' %}
+{% block content %}
+
+<div class="inner_content_info_agileits">
+    <div class="container">
+        <h3 class="heading-agileinfo">Complaint Update</h3>
+        <div class="modal-body align-w3">
+            <form action="/addcomplaintupdate/{{task.id}}" method="POST" class="p-sm-3">
+                <div class="form-group">
+                    <label class="mb-2">Update your complaint</label>
+                    <textarea rows="4" class="form-control" id="complaint" name="complaint" value="{{tasks.complaint}}"></textarea>
+                </div><br>
+                <div class="right-w3l">
+                    <input type="submit" class="form-control bg-theme" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
